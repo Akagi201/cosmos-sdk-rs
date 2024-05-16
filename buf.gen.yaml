@@ -1,0 +1,16 @@
+version: v1
+managed:
+  enabled: true
+plugins:
+  - name: prost
+    out: crates/cosmrs/src
+    opt:
+      # - bytes=.
+      - compile_well_known_types
+      - file_descriptor_set
+  # - name: tonic
+  #   out: crates/cosmrs/src
+  #   opt:
+  #     - compile_well_known_types
+  #     - no_client=true
+  #     - no_include
